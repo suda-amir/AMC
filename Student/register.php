@@ -82,7 +82,7 @@
                                                     </span>
                                                     <div class="form-group label-floating">
                                                         <label class="control-label">PRN Number</label>
-                                                        <input name="email" type="text" class="form-control" required minlength="9" maxlength="9">
+                                                        <input name="prn" type="text" class="form-control" required minlength="9" maxlength="9">
                                                     </div>
                                                 </div>
 
