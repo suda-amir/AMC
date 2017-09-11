@@ -30,31 +30,27 @@
 
         <div class="container">
 
-            <form class="form-signin" action="validate.php">
+            <form class="form-signin" action="validate.php" method = "post">
                 <h2 class="form-signin-heading">sign in now</h2>
                 <div class="login-wrap">
                 <div class="btn-row" style="padding-left: 15%;">
                         <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-default">
-                                <input type="radio" name="options" id="Teacher"> Teacher
+                                <input type="radio" name="options" id="Teacher" value="1" checked> Teacher
                             </label>
                             <label class="btn btn-default">
-                                <input type="radio" name="options" id="Student"> Student
+                                <input type="radio" name="options" id="Student" value="2"> Student
                             </label>
                             <label class="btn btn-default">
-                                <input type="radio" name="options" id="Admin"> Admin
+                                <input type="radio" name="options" id="Admin" value="3"> Admin
                             </label>
                         </div>
                     </div>
-                    <input type="text" class="form-control" placeholder="User ID" autofocus>
-                    <input type="password" class="form-control" placeholder="Password">
-                    <label class="checkbox">
-                        <input type="checkbox" value="remember-me"> Remember me
+                    <input type="text" class="form-control" placeholder="User ID" autofocus name="username">
+                    <input type="password" class="form-control" placeholder="Password" name="password">
                         <span class="pull-right">
                             <a data-toggle="modal" href="#myModal"> Forgot Password?</a>
-
                         </span>
-                    </label>
                     <button class="btn btn-lg btn-login btn-block" type="submit">Sign in</button>
 
                     <div class="registration">
