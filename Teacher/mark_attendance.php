@@ -313,30 +313,27 @@ require_once("get_teacher_details.php");
       <section id="main-content">
           <section class="wrapper">
               <div class="row">
-                      <section class="panel">
-                          <div class="panel-body">
-                              <form action="back.php" method="POST">
-                              <p class="text-muted">Mark Attendance</p>
-                              <div class="btn-row">
-                                  <div class="btn-group" data-toggle="buttons">
-                                      <?php
-                                      $data = get_student_details();
-                                      foreach ($data as $single_student){
-                                      ?>
-                                      <label class="btn btn-primary">
-                                          <input type="checkbox" name = "roll" value="<?=$single_student->roll;?>"> <?=$single_student->roll;?>
-                                      </label>
-                                      <?php
-                                      }
-                                      ?>
+                              <form action="back.php" method="POST" >
+                                  <div class="form-group">
+                                      <label class="col-sm-2 control-label col-lg-2" for="inputSuccess">Roll Numbers</label>
+                                      <div class="col-lg-10">
+                                          <?php
+                                          $data = get_student_details();
+                                          foreach ($data as $single_student){
+                                          ?>
+                                          <label class="checkbox-inline">
+                                              <input type="checkbox" id="inlineCheckbox1" value="<?=$single_student->roll;?>"> <?=$single_student->roll;?>
+                                          </label>
+                                          <?php
+                                          }
+                                          ?>
+                                      </div>
+                                      
                                       <button class="btn btn-lg btn-login btn-block" type="submit">Submit Attendance</button>
                                   </div>
-                              </div>
                               </form>
                           </div>
                           
-                      </section>
-                  </div>
               <!-- page end-->
           </section>
       </section>
