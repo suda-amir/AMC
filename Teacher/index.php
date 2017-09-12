@@ -306,10 +306,11 @@ require_once('config.php');
                       </a>
                       <ul class="sub">
                           <li><a  href="form_component.php">Add Attendace</a></li>
+                          <li><a  href="#">View Attendance</a></li>
                       </ul>
                   </li>
 
-                 
+
               </ul>
               <!-- sidebar menu end-->
           </div>
