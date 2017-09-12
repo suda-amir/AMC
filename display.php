@@ -4,7 +4,7 @@
    <!DOCTYPE html>  
  <html>  
       <head>  
-           <title>GLOBAL INFOTECH | ADMIN-PANEL</title>  
+           <title>SINHGAD INSTITUTES</title>  
            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
            <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>  
@@ -21,7 +21,9 @@
           
           
           <?php
-            $query = "";
+            $year = "TE";
+            $division = "C";
+            $query = "SELECT `name`, `roll` FROM `student` WHERE `division` = '$division' AND `acad_year` = '$year'";
             $result = mysqli_query($connect, $query);
           ?>
           
@@ -45,21 +47,25 @@
                          
                           <?php
                          if($result)
-                          while($row =  mysqli_fetch_array($result5))  
-                          {  
-                               echo '  
+                          while($row =  mysqli_fetch_array($result))  
+                          {
+                              ?>
+                                
                                <tr>  
-                                    <td>'.$row["roll"].'</td> 
-                                    <td>'.$row["name"].'</td>             
+                                    <td><?php echo $row["roll"];?></td> 
+                                    <td><?php echo $row["name"];?></td>             
                                     <td><button class="btn btn-lg btn-login btn-block" type="submit">Present</button></td>
+                                   <?php
+                                        
+                                   ?>
                                     <td><button class="btn btn-lg btn-login btn-block" type="submit">Absent</button></td>
 				               </tr>  
-                               ';  
-                          }  
+                              
+                         <?php }  
                           ?>  
                      </table>
                     
-                    <a href="export-overall.php">Export To Excel</a>
+                    <a href="export-book.php">Export To Excel</a>
                     
                 </div>  
            </div>  
