@@ -329,6 +329,7 @@ require_once("get_teacher_details.php");
                                       <?php
                                       }
                                       ?>
+                                      <input type="submit" name="submit" value="Register Now">
                                   </div>
                               </div>
                           </div>
