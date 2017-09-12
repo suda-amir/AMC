@@ -188,9 +188,9 @@
                                                         <label class="control-label">Division</label>
                                                         <select class="form-control" name="div" required>
                                                             <option disabled="" selected=""></option>
-                                                            <option value="TEA"> TEA </option>
-                                                            <option value="TEB"> TEB </option>
-                                                            <option value="TEC"> TEC </option>
+                                                            <option value="A"> TEA </option>
+                                                            <option value="B"> TEB </option>
+                                                            <option value="C"> TEC </option>
                                                         </select>
                                                     </div>
                                                 </div>
