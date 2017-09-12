@@ -313,9 +313,9 @@ require_once("get_teacher_details.php");
       <section id="main-content">
           <section class="wrapper">
               <div class="row">
-                  <form action="back.php" method="post">
                       <section class="panel">
                           <div class="panel-body">
+                              <form action="back.php" method="POST">
                               <p class="text-muted">Mark Attendance</p>
                               <div class="btn-row">
                                   <div class="btn-group" data-toggle="buttons">
@@ -329,13 +329,13 @@ require_once("get_teacher_details.php");
                                       <?php
                                       }
                                       ?>
-                                      <input type="submit" name="submit" value="Register Now">
+                                      <button class="btn btn-lg btn-login btn-block" type="submit">Submit Attendance</button>
                                   </div>
                               </div>
+                              </form>
                           </div>
                           
                       </section>
-                  </form>
                   </div>
               <!-- page end-->
           </section>

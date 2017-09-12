@@ -2,7 +2,7 @@
 
 require_once('config.php');
 
-
+echo "Reached"; 
 $subject = "SDL";
 $name = "kashyap";
 $class = "TE";
