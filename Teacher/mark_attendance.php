@@ -322,7 +322,7 @@ require_once("get_teacher_details.php");
                                           foreach ($data as $single_student){
                                           ?>
                                           <label class="checkbox-inline">
-                                              <input type="checkbox" id="inlineCheckbox1" value="<?=$single_student->roll;?>"> <?=$single_student->roll;?>
+                                              <input type="checkbox" name="roll[]" value="<?=$single_student->roll;?>" > <?=$single_student->roll;?>
                                           </label>
                                           <?php
                                           }
