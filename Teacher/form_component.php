@@ -1,3 +1,6 @@
+<?php
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -263,7 +266,7 @@
                   <li class="dropdown">
                       <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                           <img alt="" src="img/avatar1_small.jpg">
-                          <span class="username">Jhon Doue</span>
+                          <span class="username"></span>
                           <b class="caret"></b>
                       </a>
                       <ul class="dropdown-menu extended logout">
@@ -288,189 +291,21 @@
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
                   <li>
-                      <a href="index.html">
+                      <a class="active" href="index.html">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
                   </li>
 
                   <li class="sub-menu">
-                      <a href="javascript:;">
+                      <a href="javascript:;" >
                           <i class="fa fa-laptop"></i>
-                          <span>Layouts</span>
+                          <span>Attendance</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="boxed_page.html">Boxed Page</a></li>
-                          <li><a  href="horizontal_menu.html">Horizontal Menu</a></li>
-                          <li><a  href="header-color.html">Different Color Top bar</a></li>
-                          <li><a  href="mega_menu.html">Mega Menu</a></li>
-                          <li><a  href="language_switch_bar.html">Language Switch Bar</a></li>
-                          <li><a  href="email_template.html" target="_blank">Email Template</a></li>
+                          <li><a  href="form_component.html">Add Attendace</a></li>
                       </ul>
                   </li>
-
-                  <li class="sub-menu">
-                      <a href="javascript:;">
-                          <i class="fa fa-book"></i>
-                          <span>UI Elements</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="general.html">General</a></li>
-                          <li><a  href="buttons.html">Buttons</a></li>
-                          <li><a  href="modal.html">Modal</a></li>
-                          <li><a  href="toastr.html">Toastr Notifications</a></li>
-                          <li><a  href="widget.html">Widget</a></li>
-                          <li><a  href="slider.html">Slider</a></li>
-                          <li><a  href="nestable.html">Nestable</a></li>
-                          <li><a  href="tree.html">Tree View</a></li>
-                          <li><a  href="font_awesome.html">Font Awesome</a></li>
-                      </ul>
-                  </li>
-
-                  <li class="sub-menu">
-                      <a href="javascript:;">
-                          <i class="fa fa-cogs"></i>
-                          <span>Components</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="grids.html">Grids</a></li>
-                          <li><a  href="calendar.html">Calendar</a></li>
-                          <li><a  href="gallery.html">Gallery</a></li>
-                          <li><a  href="todo_list.html">Todo List</a></li>
-                          <li><a  href="draggable_portlet.html">Draggable Portlet</a></li>
-                      </ul>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" class="active" >
-                          <i class="fa fa-tasks"></i>
-                          <span>Form Stuff</span>
-                      </a>
-                      <ul class="sub">
-                          <li class="active"><a  href="form_component.html">Form Components</a></li>
-                          <li><a  href="advanced_form_components.html">Advanced Components</a></li>
-                          <li><a  href="form_wizard.html">Form Wizard</a></li>
-                          <li><a  href="form_validation.html">Form Validation</a></li>
-                          <li><a  href="dropzone.html">Dropzone File Upload</a></li>
-                          <li><a  href="inline_editor.html">Inline Editor</a></li>
-                          <li><a  href="image_cropping.html">Image Cropping</a></li>
-                          <li><a  href="file_upload.html">Multiple File Upload</a></li>
-                      </ul>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-th"></i>
-                          <span>Data Tables</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="basic_table.html">Basic Table</a></li>
-                          <li><a  href="responsive_table.html">Responsive Table</a></li>
-                          <li><a  href="dynamic_table.html">Dynamic Table</a></li>
-                          <li><a  href="editable_table.html">Editable Table</a></li>
-                      </ul>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class=" fa fa-envelope"></i>
-                          <span>Mail</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="inbox.html">Inbox</a></li>
-                          <li><a  href="inbox_details.html">Inbox Details</a></li>
-                      </ul>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class=" fa fa-bar-chart-o"></i>
-                          <span>Charts</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="morris.html">Morris</a></li>
-                          <li><a  href="chartjs.html">Chartjs</a></li>
-                          <li><a  href="flot_chart.html">Flot Charts</a></li>
-                          <li><a  href="xchart.html">xChart</a></li>
-                      </ul>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-shopping-cart"></i>
-                          <span>Shop</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="product_list.html">List View</a></li>
-                          <li><a  href="product_details.html">Details View</a></li>
-                      </ul>
-                  </li>
-                  <li>
-                      <a href="google_maps.html" >
-                          <i class="fa fa-map-marker"></i>
-                          <span>Google Maps </span>
-                      </a>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;">
-                          <i class="fa fa-comments-o"></i>
-                          <span>Chat Room</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="lobby.html">Lobby</a></li>
-                          <li><a  href="chat_room.html"> Chat Room</a></li>
-                      </ul>
-                  </li>
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-glass"></i>
-                          <span>Extra</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="blank.html">Blank Page</a></li>
-                          <li><a  href="sidebar_closed.html">Sidebar Closed</a></li>
-                          <li><a  href="people_directory.html">People Directory</a></li>
-                          <li><a  href="coming_soon.html">Coming Soon</a></li>
-                          <li><a  href="lock_screen.html">Lock Screen</a></li>
-                          <li><a  href="profile.html">Profile</a></li>
-                          <li><a  href="invoice.html">Invoice</a></li>
-                          <li><a  href="project_list.html">Project List</a></li>
-                          <li><a  href="project_details.html">Project Details</a></li>
-                          <li><a  href="search_result.html">Search Result</a></li>
-                          <li><a  href="pricing_table.html">Pricing Table</a></li>
-                          <li><a  href="faq.html">FAQ</a></li>
-                          <li><a  href="fb_wall.html">FB Wall</a></li>
-                          <li><a  href="404.html">404 Error</a></li>
-                          <li><a  href="500.html">500 Error</a></li>
-                      </ul>
-                  </li>
-                  <li>
-                      <a  href="login.html">
-                          <i class="fa fa-user"></i>
-                          <span>Login Page</span>
-                      </a>
-                  </li>
-
-                  <!--multi level menu start-->
-                  <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-sitemap"></i>
-                          <span>Multi level Menu</span>
-                      </a>
-                      <ul class="sub">
-                          <li><a  href="javascript:;">Menu Item 1</a></li>
-                          <li class="sub-menu">
-                              <a  href="boxed_page.html">Menu Item 2</a>
-                              <ul class="sub">
-                                  <li><a  href="javascript:;">Menu Item 2.1</a></li>
-                                  <li class="sub-menu">
-                                      <a  href="javascript:;">Menu Item 3</a>
-                                      <ul class="sub">
-                                          <li><a  href="javascript:;">Menu Item 3.1</a></li>
-                                          <li><a  href="javascript:;">Menu Item 3.2</a></li>
-                                      </ul>
-                                  </li>
-                              </ul>
-                          </li>
-                      </ul>
-                  </li>
-                  <!--multi level menu end-->
-
               </ul>
               <!-- sidebar menu end-->
           </div>
@@ -484,42 +319,19 @@
                   <div class="col-lg-12">
                       <section class="panel">
                           <header class="panel-heading">
-                              Inline form
-                          </header>
-                          <div class="panel-body">
-                              <form class="form-inline" role="form">
-                                  <div class="form-group">
-                                      <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                      <input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
-                                  </div>
-                                  <div class="form-group">
-                                      <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                      <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
-                                  </div>
-                                  <div class="checkbox">
-                                      <label>
-                                          <input type="checkbox"> Remember me
-                                      </label>
-                                  </div>
-                                  <button type="submit" class="btn btn-success">Sign in</button>
-                              </form>
-
-                          </div>
-                      </section>
-
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-lg-6">
-                      <section class="panel">
-                          <header class="panel-heading">
-                              Basic Forms
+                              Enter Class Details
                           </header>
                           <div class="panel-body">
                               <form role="form">
                                   <div class="form-group">
-                                      <label for="exampleInputEmail1">Email address</label>
-                                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                                      <label class="col-sm-2 control-label col-lg-2" for="inputSuccess">Control sizing</label>
+                                      <div class="col-lg-10">
+                                          <select class="form-control input-sm m-bot15">
+                                              <option>TEA</option>
+                                              <option>TEB</option>
+                                              <option>TEC</option>
+                                          </select>
+                                      </div>
                                   </div>
                                   <div class="form-group">
                                       <label for="exampleInputPassword1">Password</label>
@@ -541,166 +353,7 @@
                           </div>
                       </section>
                   </div>
-                  <div class="col-lg-6">
-                      <section class="panel">
-                          <header class="panel-heading">
-                              Horizontal Forms
-                          </header>
-                          <div class="panel-body">
-                              <form class="form-horizontal" role="form">
-                                  <div class="form-group">
-                                      <label for="inputEmail1" class="col-lg-2 col-sm-2 control-label">Email</label>
-                                      <div class="col-lg-10">
-                                          <input type="email" class="form-control" id="inputEmail1" placeholder="Email">
-                                          <p class="help-block">Example block-level help text here.</p>
-                                      </div>
-                                  </div>
-                                  <div class="form-group">
-                                      <label for="inputPassword1" class="col-lg-2 col-sm-2 control-label">Password</label>
-                                      <div class="col-lg-10">
-                                          <input type="password" class="form-control" id="inputPassword1" placeholder="Password">
-                                      </div>
-                                  </div>
-                                  <div class="form-group">
-                                      <div class="col-lg-offset-2 col-lg-10">
-                                          <div class="checkbox">
-                                              <label>
-                                                  <input type="checkbox"> Remember me
-                                              </label>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="form-group">
-                                      <div class="col-lg-offset-2 col-lg-10">
-                                          <button type="submit" class="btn btn-danger">Sign in</button>
-                                      </div>
-                                  </div>
-                              </form>
-                          </div>
-                      </section>
-                      <section class="panel">
-
-                          <div class="panel-body">
-                              <a href="#myModal" data-toggle="modal" class="btn btn-xs btn-success">
-                                  Form in Modal
-                              </a>
-                              <a href="#myModal-1" data-toggle="modal" class="btn btn-xs btn-warning">
-                                  Form in Modal 2
-                              </a>
-                              <a href="#myModal-2" data-toggle="modal" class="btn btn-xs btn-danger">
-                                  Form in Modal 3
-                              </a>
-
-                              <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
-                                  <div class="modal-dialog">
-                                      <div class="modal-content">
-                                          <div class="modal-header">
-                                              <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
-                                              <h4 class="modal-title">Form Tittle</h4>
-                                          </div>
-                                          <div class="modal-body">
-
-                                              <form role="form">
-                                                  <div class="form-group">
-                                                      <label for="exampleInputEmail1">Email address</label>
-                                                      <input type="email" class="form-control" id="exampleInputEmail3" placeholder="Enter email">
-                                                  </div>
-                                                  <div class="form-group">
-                                                      <label for="exampleInputPassword1">Password</label>
-                                                      <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
-                                                  </div>
-                                                  <div class="form-group">
-                                                      <label for="exampleInputFile">File input</label>
-                                                      <input type="file" id="exampleInputFile3">
-                                                      <p class="help-block">Example block-level help text here.</p>
-                                                  </div>
-                                                  <div class="checkbox">
-                                                      <label>
-                                                          <input type="checkbox"> Check me out
-                                                      </label>
-                                                  </div>
-                                                  <button type="submit" class="btn btn-default">Submit</button>
-                                              </form>
-                                          </div>
-                                      </div>
-                                  </div>
-                              </div>
-                              <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal-1" class="modal fade">
-                                  <div class="modal-dialog">
-                                      <div class="modal-content">
-                                          <div class="modal-header">
-                                              <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
-                                              <h4 class="modal-title">Form Tittle</h4>
-                                          </div>
-                                          <div class="modal-body">
-
-                                              <form class="form-horizontal" role="form">
-                                                  <div class="form-group">
-                                                      <label for="inputEmail1" class="col-lg-2 col-sm-2 control-label">Email</label>
-                                                      <div class="col-lg-10">
-                                                          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-                                                      </div>
-                                                  </div>
-                                                  <div class="form-group">
-                                                      <label for="inputPassword1" class="col-lg-2 col-sm-2 control-label">Password</label>
-                                                      <div class="col-lg-10">
-                                                          <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-                                                      </div>
-                                                  </div>
-                                                  <div class="form-group">
-                                                      <div class="col-lg-offset-2 col-lg-10">
-                                                          <div class="checkbox">
-                                                              <label>
-                                                                  <input type="checkbox"> Remember me
-                                                              </label>
-                                                          </div>
-                                                      </div>
-                                                  </div>
-                                                  <div class="form-group">
-                                                      <div class="col-lg-offset-2 col-lg-10">
-                                                          <button type="submit" class="btn btn-default">Sign in</button>
-                                                      </div>
-                                                  </div>
-                                              </form>
-
-                                          </div>
-
-                                      </div>
-                                  </div>
-                              </div>
-                              <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal-2" class="modal fade">
-                                  <div class="modal-dialog">
-                                      <div class="modal-content">
-                                          <div class="modal-header">
-                                              <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
-                                              <h4 class="modal-title">Form Tittle</h4>
-                                          </div>
-                                          <div class="modal-body">
-                                              <form class="form-inline" role="form">
-                                                  <div class="form-group">
-                                                      <label class="sr-only" for="exampleInputEmail2">Email address</label>
-                                                      <input type="email" class="form-control sm-input" id="exampleInputEmail5" placeholder="Enter email">
-                                                  </div>
-                                                  <div class="form-group">
-                                                      <label class="sr-only" for="exampleInputPassword2">Password</label>
-                                                      <input type="password" class="form-control sm-input" id="exampleInputPassword5" placeholder="Password">
-                                                  </div>
-                                                  <div class="checkbox">
-                                                      <label>
-                                                          <input type="checkbox"> Remember me
-                                                      </label>
-                                                  </div>
-                                                  <button type="submit" class="btn btn-default">Sign in</button>
-                                              </form>
-
-                                          </div>
-
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </section>
-                  </div>
+                  
               </div>
               <div class="row">
                   <div class="col-lg-6">
@@ -759,14 +412,7 @@
                                           </div>
                                       </div>
                                   </div>
-                                  <div class="form-group">
-                                      <label  class="col-lg-3 col-sm-3 control-label">Input with Loading</label>
-                                      <div class="col-lg-9">
-                                          <div class="iconic-input right">
-                                              <input type="text" class="form-control spinner" placeholder="Something Processing">
-                                          </div>
-                                      </div>
-                                  </div>
+                                 
 
                                   <div class="form-group">
                                       <label class="col-sm-3 control-label col-lg-3">Button addons</label>
@@ -1505,3 +1151,4 @@
 
   </body>
 </html>
+

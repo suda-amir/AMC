@@ -77,7 +77,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
-                                <button class="btn btn-success" type="button">Submit</button>
+                                <button class="btn btn-success" type="button" name="submit">Submit</button>
                             </div>
                         </div>
                     </div>
@@ -95,3 +95,11 @@
         <script src="js/bootstrap.min.js"></script>
     </body>
 </html>
+
+<?php
+if(isset($_POST["submit"])){
+    $_SESSION['user_logged_in'] = $_POST["username"];
+}
+
+?>
+

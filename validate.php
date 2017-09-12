@@ -12,9 +12,9 @@
         if($result){
             while($row =  mysqli_fetch_array($result)){
                 if($row["username"] == $username AND $row["password"] == $password)
-                    header('location: Teacher/index.html');
+                    header('location: Teacher/index.php');
                     else
-                        echo "Gand mara";
+                        echo "Success";
             }  
         
     
