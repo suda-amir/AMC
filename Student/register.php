@@ -179,6 +179,35 @@
                                                 </div>
 		                                    </div>
 		                                </div>
+                                        <div class="row">
+                                            <div class="col-sm-5 col-sm-offset-1">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="material-icons">layers</i>                                                   </span>
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">Division</label>
+                                                        <select class="form-control" name="div" required>
+                                                            <option disabled="" selected=""></option>
+                                                            <option value="TEA"> TEA </option>
+                                                            <option value="TEB"> TEB </option>
+                                                            <option value="TEC"> TEC </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-5 ">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="material-icons">email</i>
+                                                    </span>
+                                                    <div class="form-group label-floating">
+                                                        <label class="control-label">Roll No.</label>
+                                                        <input name="roll" type="text" class="form-control" required minlength="1" maxlength="2">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
 		                            </div>
 		                        </div>
 	                        	<div class="wizard-footer">

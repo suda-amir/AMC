@@ -10,9 +10,11 @@
     $mobile_number = $_POST['phone'];
     $password = $_POST['password'];
     //$gender = $_POST['gender'];
+    $division = $_POST['div'];
+    $roll = $_POST['roll'];
 
     echo $prn_no;
 
-    $query_insert = "INSERT INTO `student`(`prn_no`, `name`, `acad_year`, `branch`, `college`, `mobile_number`, `password`) VALUES ('$prn_no','$name','$acad_year','$branch','$college','$mobile_number','$password')";
+    $query_insert = "INSERT INTO `student`(`prn_no`, `name`, `acad_year`, `branch`, `college`, `mobile_number`, `password`, `division`, `roll`) VALUES ('$prn_no','$name','$acad_year','$branch','$college','$mobile_number','$password', '$division', '$roll')";
     $result_insert = mysqli_query($connect, $query_insert);
 ?>

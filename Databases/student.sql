@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 12, 2017 at 10:22 AM
+-- Generation Time: Sep 12, 2017 at 10:15 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -21,44 +21,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `amc`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `admin_info`
---
-
-CREATE TABLE `admin_info` (
-  `username` varchar(256) NOT NULL,
-  `passsword` varchar(256) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `attendance`
---
-
-CREATE TABLE `attendance` (
-  `name` varchar(256) NOT NULL,
-  `roll` int(10) NOT NULL,
-  `attend` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `attendance_record`
---
-
-CREATE TABLE `attendance_record` (
-  `attend` int(11) NOT NULL,
-  `subject` varchar(256) NOT NULL,
-  `class` varchar(256) NOT NULL,
-  `date` date NOT NULL,
-  `count` int(10) NOT NULL,
-  `attend_array` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -88,33 +50,9 @@ INSERT INTO `student` (`prn_no`, `name`, `acad_year`, `branch`, `college`, `mobi
 ('71617884c', 'dfsd', 'First Year', 'Computer Enginerring', 'LOL', '7777777777', 'Sudhjj.h', '', 0),
 ('716188952', 'Hello', 'First Year', 'Information Technology', 'LOL', '8888888888', 'Sudhbkjnkj', 'TEA', 23);
 
--- --------------------------------------------------------
-
---
--- Table structure for table `teacher_info`
---
-
-CREATE TABLE `teacher_info` (
-  `username` varchar(256) NOT NULL,
-  `password` varchar(256) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `teacher_info`
---
-
-INSERT INTO `teacher_info` (`username`, `password`) VALUES
-('prashant', 'root');
-
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `admin_info`
---
-ALTER TABLE `admin_info`
-  ADD PRIMARY KEY (`username`);
 
 --
 -- Indexes for table `student`
@@ -122,12 +60,6 @@ ALTER TABLE `admin_info`
 ALTER TABLE `student`
   ADD PRIMARY KEY (`prn_no`),
   ADD UNIQUE KEY `mobile_number` (`mobile_number`);
-
---
--- Indexes for table `teacher_info`
---
-ALTER TABLE `teacher_info`
-  ADD PRIMARY KEY (`username`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
