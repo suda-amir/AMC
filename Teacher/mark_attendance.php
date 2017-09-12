@@ -1,3 +1,9 @@
+<?php
+require_once("get_student_details.php");
+require_once("get_teacher_details.php");
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -472,18 +478,28 @@
       <section id="main-content">
           <section class="wrapper">
               <div class="row">
+                  <form action="back.php" method="post">
                       <section class="panel">
                           <div class="panel-body">
                               <p class="text-muted">Mark Attendance</p>
                               <div class="btn-row">
                                   <div class="btn-group" data-toggle="buttons">
+                                      <?php
+                                      $data = get_student_details();
+                                      foreach ($data as $single_student){
+                                      ?>
                                       <label class="btn btn-primary">
-                                          <input type="checkbox"> Option 1
+                                          <input type="checkbox" name = "roll" value="<?=$single_student->roll;?>"> <?=$single_student->roll;?>
                                       </label>
+                                      <?php
+                                      }
+                                      ?>
                                   </div>
                               </div>
                           </div>
+                          
                       </section>
+                  </form>
                   </div>
               <!-- page end-->
           </section>

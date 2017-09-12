@@ -14,7 +14,8 @@
                 if($row["username"] == $username AND $row["password"] == $password)
                     header('location: Teacher/index.php');
                     else
-                        echo "Success";
+                    header('location: index.php');
+
             }  
         
     
