@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<select id="select1" onchange="select1()">
+<option>SE</option>
+<option>TE</option>
+<option>BE</option>
+</select>
+<div id="text"></div>
+<script>
+function select1()
+{
+
+	if(document.getElementById("select1").selectedIndex == '0')
+    {
+   document.getElementById("text").innerHTML= "COA<br>OOP<br>DM<br>DELD<br>DSA<br>M3<br>MA<br>PPL<br>CG<br>ADSA";
+     }
+    else if(document.getElementById("select1").selectedIndex == '1')
+    {
+    document.getElementById("text").innerHTML= "TOC<br>SEP<br>ISEE<br>CN<br>DBMS";
+     }
+    else if(document.getElementById("select1").selectedIndex == '2')
+    {
+    document.getElementById("text").innerHTML= "IOT<br>WEB<br>";
+     }
+}
+</script>
+
+</body>
+</html>
+
