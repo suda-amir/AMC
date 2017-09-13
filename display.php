@@ -21,48 +21,74 @@
           
           
           <?php
+            $subject = "SDL";
             $year = "TE";
             $division = "C";
-            $query = "SELECT `name`, `roll` FROM `student` WHERE `division` = '$division' AND `acad_year` = '$year'";
+            $date = "2017-09-14";
+            $query = "SELECT * FROM `attendance_record` WHERE `division` = '$division' AND `class` = '$year' AND `subject` = '$subject' AND `date` = '$date'";
             $result = mysqli_query($connect, $query);
+          
+             
+                         
           ?>
           
           
           
           <br /><br />  
            <div class="container">  
-                <h3 align="center">Mark Attendence</h3>  
+                <h3 align="center">Attendence</h3>  
                 <br />  
                 <div class="table-responsive">  
                      <table id="attendance_record" class="table table-striped table-bordered">  
                           <thead>  
                                <tr>  
-                                   <td>Roll No</td>  
-                                    <td>Name</td>  
-                                    <td>Present</td>  
-                                    <td>Absent</td>  
+                                   <td>subject</td>  
+                                    <td>class</td>  
+                                    <td>division</td>  
+                                    <td>date</td>
+                                    <td>count</td>  
+                                    <td>Present rollNo</td>  
                                     
 				               </tr>  
                           </thead> 
                          
                           <?php
-                         if($result)
+                        /* if($result)
                           while($row =  mysqli_fetch_array($result))  
                           {
                               ?>
                                 
                                <tr>  
-                                    <td><?php echo $row["roll"];?></td> 
-                                    <td><?php echo $row["name"];?></td>             
-                                    <td><button class="btn btn-lg btn-login btn-block" type="submit">Present</button></td>
-                                   <?php
-                                        
-                                   ?>
-                                    <td><button class="btn btn-lg btn-login btn-block" type="submit">Absent</button></td>
+                                    <td><?php echo $row["subject"];?></td> 
+                                   <td><?php echo $row["class"];?></td> 
+                                   <td><?php echo $row["division"];?></td> 
+                                   <td><?php echo $row["date"];?></td> 
+                                   <td><?php echo $row["count"];?></td> 
+                                    <td><?php echo $row["attend_array"];?></td>             
 				               </tr>  
                               
                          <?php }  
-                          ?>  
+                          ?>  */
+                         
+                         if($result)
+                          while($row =  mysqli_fetch_array($result))  
+                          {
+                                $arr = array();
+                                $arr = explode(", ", $row["attend_array"]);
+                                $arr_count = count($arr);
+                              
+                                for($i = 0 ; $i < $arr_count; $i++){?>
+                                    <tr>  
+                                    <td><?php echo $row["subject"];?></td> 
+                                   <td><?php echo $row["class"];?></td> 
+                                   <td><?php echo $row["division"];?></td> 
+                                   <td><?php echo $row["date"];?></td> 
+                                   <td><?php echo $row["count"];?></td> 
+                                    <td><?php echo $arr[$i];?></td>             
+				               </tr>  
+                               <?php }
+                                
+                          }  ?>
                      </table>
                     
                     <a href="export-book.php">Export To Excel</a>
