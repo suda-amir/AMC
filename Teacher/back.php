@@ -18,6 +18,6 @@ $query = "INSERT INTO `attendance_record` (`subject`, `class`,  `division`, `dat
 
 $result = mysqli_query($connect, $query);
 
-var_dump($result);
+header('location: index.php');
 
 ?>

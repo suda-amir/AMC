@@ -23,11 +23,11 @@
     }
 
     if($selector = '2'){
-        
+        echo "For Students, It's under construction.";
     }
 
     if($selector = '3'){
-        
+        echo "For Admin, It's under construction.";
     }
 
 
