@@ -128,10 +128,10 @@
                                                         <select class="form-control" name="year" required>
                                                             <option disabled="" selected=""></option>
                                                             <option disabled="" style="font-weight: 900;">--Bachelor's--</option>
-                                                            <option value="First Year">FE</option>
-                                                            <option value="Sxecond Year">SE</option>
-                                                            <option value="Third Year">TE</option>
-                                                            <option value="Fourth Year">BE</option>
+                                                            <option value="FE">FE</option>
+                                                            <option value="SE">SE</option>
+                                                            <option value="TE">TE</option>
+                                                            <option value="BE">BE</option>
                                                             <option disabled="" style="font-weight: 900;">--Master's--</option>
                                                             <option value="ME First Year"> First Year </option>
                                                             <option value="ME Second Year"> Second Year </option>

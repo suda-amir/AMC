@@ -403,19 +403,18 @@
                                   </header>
                                   <div class="panel-body">
                                       <div class="form">
-                                          <form action="#" class="form-horizontal">
                                               <div class="form-group">
                                                   <label class="col-sm-2 control-label col-sm-2">LESSON PLAN</label>
                                                   <div class="col-sm-10">
-                                                      <textarea class="form-control ckeditor" name="editor1" rows="6" name = "lesson_plan"></textarea>
+                                                      <textarea class="form-control ckeditor" rows="6" name = "lesson_plan"></textarea>
                                                   </div>
                                               </div>
-                                          </form>
+                                         
                                       </div>
                                   </div>
                           </div>
                       
-
+                                <input type="submit" class="btn btn-success" value="GO!">
                                   <!---message panel end--->
                               </form>
 
@@ -424,7 +423,7 @@
                   </div>
                   
          </div>
-               <button type="button" class="btn btn-success">GO!</button>
+               
                                  
 
                                  

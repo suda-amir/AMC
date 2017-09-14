@@ -5,11 +5,11 @@ require_once("get_teacher_details.php");
     $class = $_POST["class"];
     $division = $_POST["division"];
 
-session_start();
+//session_start();
     $_SESSION["class"] = $class;
     $_SESSION["division"] = $division;
     $_SESSION["subject"] = $_POST["subject"];;
-    $_SESSION["lession_plan"] = $_POST["lesson_plan"];
+    $_SESSION["lesson_plan"] = $_POST["lesson_plan"];
     
 
 ?>

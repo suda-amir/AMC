@@ -23,9 +23,9 @@
           <?php
             $subject = "SDL";
             $year = "TE";
-            $division = "C";
+            $division = "B";
             $date = "2017-09-14";
-            $query = "SELECT * FROM `attendance_record` WHERE `division` = '$division' AND `class` = '$year' AND `subject` = '$subject' AND `date` = '$date'";
+            $query = "SELECT `subject`, `class`, `division`, `date`, `attend_array`, `lesson_plan` FROM `attendance_record` WHERE `division` = '$division' AND `class` = '$year' AND `subject` = '$subject' AND `date` = '$date'";
             $result = mysqli_query($connect, $query);
           
              
@@ -41,35 +41,15 @@
                 <div class="table-responsive">  
                      <table id="attendance_record" class="table table-striped table-bordered">  
                           <thead>  
-                               <tr>  
-                                   <td>subject</td>  
+                               <tr>    
                                     <td>class</td>  
                                     <td>division</td>  
-                                    <td>date</td>
-                                    <td>count</td>  
                                     <td>Present rollNo</td>  
-                                    
+                                    <td>Lesson Plan</td>
 				               </tr>  
                           </thead> 
                          
                           <?php
-                        /* if($result)
-                          while($row =  mysqli_fetch_array($result))  
-                          {
-                              ?>
-                                
-                               <tr>  
-                                    <td><?php echo $row["subject"];?></td> 
-                                   <td><?php echo $row["class"];?></td> 
-                                   <td><?php echo $row["division"];?></td> 
-                                   <td><?php echo $row["date"];?></td> 
-                                   <td><?php echo $row["count"];?></td> 
-                                    <td><?php echo $row["attend_array"];?></td>             
-				               </tr>  
-                              
-                         <?php }  
-                          ?>  */
-                         
                          if($result)
                           while($row =  mysqli_fetch_array($result))  
                           {
@@ -79,12 +59,10 @@
                               
                                 for($i = 0 ; $i < $arr_count; $i++){?>
                                     <tr>  
-                                    <td><?php echo $row["subject"];?></td> 
                                    <td><?php echo $row["class"];?></td> 
-                                   <td><?php echo $row["division"];?></td> 
-                                   <td><?php echo $row["date"];?></td> 
-                                   <td><?php echo $row["count"];?></td> 
-                                    <td><?php echo $arr[$i];?></td>             
+                                   <td><?php echo $row["division"];?></td>  
+                                    <td><?php echo $arr[$i];?></td>
+                                    <td><?php echo $row["lesson_plan"];?></td>
 				               </tr>  
                                <?php }
                                 

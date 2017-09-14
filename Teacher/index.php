@@ -306,7 +306,7 @@ require_once('config.php');
                       </a>
                       <ul class="sub">
                           <li><a  href="add_attendance.php">Add Attendace</a></li>
-                          <li><a  href="#">View Attendance</a></li>
+                          <li><a  href="../display.php">View Attendance</a></li>
                       </ul>
                   </li>
 
