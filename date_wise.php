@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 
   <?php
             require_once("config.php");
@@ -6,9 +5,17 @@
             $year = "TE";
             $division = "B";
             $date = "2017-09-14";
-            $query = "SELECT `subject`, `class`, `division`, `date`, `attend_array`, `lesson_plan` FROM `attendance_record` WHERE `division` = '$division' AND `class` = '$year' AND `subject` = '$subject' AND `date` = '$date'";
+            $total = 0;
+
+
+            $query = "SELECT `subject`, `class`, `division`, `date`, `count`, `lesson_plan` FROM `attendance_record` WHERE `class` = '$year' AND `division` = '$division' AND `date` = '$date'";
+
+
             $result = mysqli_query($connect, $query);
-          
+
+            $query2 = "SELECT count(*) as total FROM `student` WHERE `acad_year` = '$year' AND `division` = '$division'";
+            $result2 = mysqli_query($connect, $query2);
+            $data=mysqli_fetch_array($result2);
              
                          
           ?>
@@ -24,7 +31,7 @@
     <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
     <link rel="shortcut icon" href="img/favicon.png">
 
-    <title>Editable Table</title>
+    <title>ATTENDANCE RECORD</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -98,7 +105,10 @@
               <!-- page start-->
               <section class="panel">
                   <header class="panel-heading">
-                      ATTENDANCE RECORD
+                      ATTENDANCE RECORD - <?php echo "$date"; ?>
+                  </header>
+                  <header class="panel-heading">
+                      Total students:  <?php echo $data["total"]; ?>
                   </header>
                   <div class="panel-body">
                       <div class="adv-table editable-table ">
@@ -121,30 +131,28 @@
                           <table class="table table-striped table-hover table-bordered" id="editable-sample">
                               <thead>
                               <tr>
-                                    <td>class</td>  
-                                    <td>division</td>  
-                                    <td>Present rollNo</td>  
-                                    <td>Lesson Plan</td>
+                                    <td>SUBJECT</td>  
+                                    <td>CLASS</td>  
+                                    <td>DIVISION</td>  
+                                    <td>TOTAL PRESENT</td>
+                                   
                               </tr>
                               </thead>
                               <?php
                          if($result)
                           while($row =  mysqli_fetch_array($result))  
-                          {
-                                $arr = array();
-                                $arr = explode(", ", $row["attend_array"]);
-                                $arr_count = count($arr);
-                              
-                                for($i = 0 ; $i < $arr_count; $i++){?>
-                                    <tr>  
-                                   <td><?php echo $row["class"];?></td> 
-                                   <td><?php echo $row["division"];?></td>  
-                                    <td><?php echo $arr[$i];?></td>
-                                    <td><?php echo $row["lesson_plan"];?></td>
+                          {  
+                               echo '  
+                               <tr> 
+                                    <td>'.$row["subject"].'</td> 
+                                    <td>'.$row["class"].'</td>
+                                    <td>'.$row["division"].'</td>
+                                    <td>'.$row["count"].'</td> 
+        
 				               </tr>  
-                               <?php }
-                                
-                          }  ?>
+                               ';  
+                          }   
+                              ?>
                           </table>
 
                           </div>

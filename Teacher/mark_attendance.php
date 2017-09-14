@@ -115,7 +115,7 @@ require_once("get_teacher_details.php");
               <!-- page end-->
           </section>
       </section>
-     
+      </section> 
 
     <!-- js placed at the end of the document so the pages load faster -->
     <script src="js/jquery.js"></script>
@@ -130,7 +130,7 @@ require_once("get_teacher_details.php");
 
     <!--common script for all pages-->
     <script src="js/common-scripts.js"></script>
-
+    
 
   </body>
 </html>

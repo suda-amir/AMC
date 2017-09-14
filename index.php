@@ -36,7 +36,7 @@
                 <div class="btn-row" style="padding-left: 15%;">
                         <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-default">
-                                <input type="radio" name="options" id="Teacher" value="1" checked> Teacher
+                                <input type="radio" name="options" id="Teacher" value="1"> Teacher
                             </label>
                             <label class="btn btn-default">
                                 <input type="radio" name="options" id="Student" value="2"> Student
