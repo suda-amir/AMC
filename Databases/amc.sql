@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 13, 2017 at 08:51 AM
+-- Generation Time: Sep 14, 2017 at 11:12 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -45,17 +45,19 @@ CREATE TABLE `attendance_record` (
   `division` varchar(10) NOT NULL,
   `date` date NOT NULL,
   `count` int(10) NOT NULL,
-  `attend_array` varchar(100) NOT NULL
+  `attend_array` varchar(100) NOT NULL,
+  `lesson_plan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `attendance_record`
 --
 
-INSERT INTO `attendance_record` (`subject`, `class`, `division`, `date`, `count`, `attend_array`) VALUES
-('SDL', 'TE', 'C', '2017-09-13', 2, '5, 10'),
-('SDL', 'TE', 'C', '2017-09-13', 2, '10, 2'),
-('SDL', 'TE', 'C', '2017-09-14', 2, '5, 10');
+INSERT INTO `attendance_record` (`subject`, `class`, `division`, `date`, `count`, `attend_array`, `lesson_plan`) VALUES
+('SDL', 'TE', 'B', '2017-09-14', 2, '12, 5', '<p>JAVA session.</p>\r\n'),
+('SDL', 'TE', 'B', '2017-09-14', 1, '5', '<p>XYZ</p>\r\n'),
+('SDL', 'TE', 'B', '2017-09-14', 1, '12', ''),
+('SDL', 'TE', 'B', '2017-09-14', 1, '12', '');
 
 -- --------------------------------------------------------
 
@@ -80,11 +82,8 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`prn_no`, `name`, `acad_year`, `branch`, `college`, `mobile_number`, `password`, `division`, `roll`) VALUES
-('', '', '', '', '', '', '', '', 0),
-('71617840m', 'kash', 'TE', 'comp', 'sit', '9730470070', 'root', 'C', 5),
-('71617844m', 'kashyap', 'TE', 'computer', 'SIT', '9730470077', 'root', 'C', 10),
-('71617890t', 'sudarshan', 'TE', 'Computer Enginerring', 'LOL', '9730777777', 'root', 'C', 2),
-('74185296m', 'kashyap', 'Third Year', 'Computer Enginerring', 'LOL', '9874563210', 'root', 'C', 22);
+('71617790m', 'kevin modi', 'TE', 'Computer Enginerring', 'LOL', '9662244182', 'root', 'B', 12),
+('71617840m', 'kashyap shroff', 'TE', 'Computer Enginerring', 'LOL', '9730470070', 'root', 'B', 5);
 
 -- --------------------------------------------------------
 
