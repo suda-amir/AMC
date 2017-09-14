@@ -8,7 +8,7 @@
             $total = 0;
 
 
-            $query = "SELECT `subject`, `class`, `division`, `date`, `count`, `lesson_plan` FROM `attendance_record` WHERE `class` = '$year' AND `division` = '$division' AND MONTH(date) = '$month'";
+            $query = "SELECT `subject`, `class`, `division`, `date`, `count`, `lesson_plan`, `teacher` FROM `attendance_record` WHERE `class` = '$year' AND `division` = '$division' AND MONTH(date) = '$month'";
 
 
             $result = mysqli_query($connect, $query);
@@ -131,6 +131,7 @@
                           <table class="table table-striped table-hover table-bordered" id="editable-sample">
                               <thead>
                               <tr>
+                                    <td>FACULTY</td>
                                     <td>SUBJECT</td>  
                                     <td>CLASS</td>  
                                     <td>DIVISION</td>  
@@ -144,6 +145,7 @@
                           {  
                                echo '  
                                <tr> 
+                                     <td>'.$row["teacher"].'</td>
                                     <td>'.$row["subject"].'</td> 
                                     <td>'.$row["class"].'</td>
                                     <td>'.$row["division"].'</td>

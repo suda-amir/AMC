@@ -17,6 +17,8 @@
             while($row =  mysqli_fetch_array($result)){
                 if($row["username"] == $username AND $row["password"] == $password){
                     header('location: Teacher/index.php');
+                    session_start();
+                    $_SESSION["teacher_please"] = $row["teacher_name"];
                 }
                     
                     else

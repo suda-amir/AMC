@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 14, 2017 at 11:12 AM
+-- Generation Time: Sep 14, 2017 at 09:17 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -33,6 +33,13 @@ CREATE TABLE `admin_info` (
   `passsword` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `admin_info`
+--
+
+INSERT INTO `admin_info` (`username`, `passsword`) VALUES
+('principal', 'sit');
+
 -- --------------------------------------------------------
 
 --
@@ -46,18 +53,16 @@ CREATE TABLE `attendance_record` (
   `date` date NOT NULL,
   `count` int(10) NOT NULL,
   `attend_array` varchar(100) NOT NULL,
-  `lesson_plan` text NOT NULL
+  `lesson_plan` text NOT NULL,
+  `teacher` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `attendance_record`
 --
 
-INSERT INTO `attendance_record` (`subject`, `class`, `division`, `date`, `count`, `attend_array`, `lesson_plan`) VALUES
-('SDL', 'TE', 'B', '2017-09-14', 2, '12, 5', '<p>JAVA session.</p>\r\n'),
-('SDL', 'TE', 'B', '2017-09-14', 1, '5', '<p>XYZ</p>\r\n'),
-('SDL', 'TE', 'B', '2017-09-14', 1, '12', ''),
-('SDL', 'TE', 'B', '2017-09-14', 1, '12', '');
+INSERT INTO `attendance_record` (`subject`, `class`, `division`, `date`, `count`, `attend_array`, `lesson_plan`, `teacher`) VALUES
+('SDL', 'TE', 'B', '2017-09-14', 1, '50', '<p><strong>Oh teacher please.</strong></p>\r\n', 'Prashant Dongre');
 
 -- --------------------------------------------------------
 
@@ -83,7 +88,9 @@ CREATE TABLE `student` (
 
 INSERT INTO `student` (`prn_no`, `name`, `acad_year`, `branch`, `college`, `mobile_number`, `password`, `division`, `roll`) VALUES
 ('71617790m', 'kevin modi', 'TE', 'Computer Enginerring', 'LOL', '9662244182', 'root', 'B', 12),
-('71617840m', 'kashyap shroff', 'TE', 'Computer Enginerring', 'LOL', '9730470070', 'root', 'B', 5);
+('71617840m', 'kashyap shroff', 'TE', 'Computer Enginerring', 'LOL', '9730470070', 'root', 'B', 5),
+('71617850m', 'divya', 'TE', 'Computer Enginerring', 'SIT', '7845129630', 'root', 'C', 20),
+('77777777m', 'sudarshan', 'TE', 'Computer Enginerring', 'SIT', '7418529630', 'root', 'B', 50);
 
 -- --------------------------------------------------------
 
@@ -93,15 +100,16 @@ INSERT INTO `student` (`prn_no`, `name`, `acad_year`, `branch`, `college`, `mobi
 
 CREATE TABLE `teacher_info` (
   `username` varchar(256) NOT NULL,
-  `password` varchar(256) NOT NULL
+  `password` varchar(256) NOT NULL,
+  `teacher_name` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `teacher_info`
 --
 
-INSERT INTO `teacher_info` (`username`, `password`) VALUES
-('prashant', 'root');
+INSERT INTO `teacher_info` (`username`, `password`, `teacher_name`) VALUES
+('prashant', 'root', 'Prashant Dongre');
 
 --
 -- Indexes for dumped tables
