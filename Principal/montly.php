@@ -66,7 +66,7 @@
               <i class="fa fa-bars"></i>
           </div>
           <!--logo start-->
-          <a href="index.php" class="logo" >Sinhgad Institutes of Technology</a>
+          <a href="index.php" class="logo" >Sinhgad Institute of Technology</a>
           <!--logo end-->
 
       </header>

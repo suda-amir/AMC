@@ -64,7 +64,7 @@
                   <i class="fa fa-bars"></i>
               </div>
             <!--logo start-->
-            <a href="Teacher/index.php" class="logo">SINHGAD<span> INSTITUTES OF TECHNOLOGY</span></a>
+            <a href="Teacher/index.php" class="logo">SINHGAD<span> INSTITUTE OF TECHNOLOGY</span></a>
             <!--logo end-->
         </header>
       <!--header end-->

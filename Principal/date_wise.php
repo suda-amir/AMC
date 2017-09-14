@@ -4,10 +4,12 @@
             $year = $_POST["class"];
             $division = $_POST["division"];
             $date = $_POST["date"];
+$parts = explode('-',$date);
+$yyyy_mm_dd = $parts[2] . '-' . $parts[0] . '-' . $parts[1];
             $total = 0;
 
 
-            $query = "SELECT `subject`, `class`, `division`, `date`, `count`, `lesson_plan`,`teacher` FROM `attendance_record` WHERE `class` = '$year' AND `division` = '$division' AND `date` = '$date'";
+            $query = "SELECT `subject`, `class`, `division`, `date`, `count`, `lesson_plan`,`teacher` FROM `attendance_record` WHERE `class` = '$year' AND `division` = '$division' AND `date` = '$yyyy_mm_dd'";
 
 
             $result = mysqli_query($connect, $query);
@@ -63,7 +65,7 @@
                   <i class="fa fa-bars"></i>
               </div>
             <!--logo start-->
-            <a href="Teacher/index.php" class="logo">SINHGAD<span> INSTITUTES OF TECHNOLOGY</span></a>
+            <a href="Teacher/index.php" class="logo">SINHGAD<span> INSTITUTE OF TECHNOLOGY</span></a>
             <!--logo end-->
         </header>
       <!--header end-->

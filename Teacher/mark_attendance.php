@@ -96,8 +96,7 @@ require_once("get_teacher_details.php");
               <!-- sidebar menu end-->
           </div>
       </aside>
-      </aside>
-      <!--sidebar end-->
+s      <!--sidebar end-->
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper">
