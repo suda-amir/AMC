@@ -293,7 +293,7 @@ require_once('config.php');
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
                   <li>
-                      <a class="active" href="index.html">
+                      <a class="active" href="index.php">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
@@ -305,7 +305,7 @@ require_once('config.php');
                           <span>Attendance</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="form_component.php">Add Attendace</a></li>
+                          <li><a  href="add_attendance.php">Add Attendace</a></li>
                           <li><a  href="#">View Attendance</a></li>
                       </ul>
                   </li>

@@ -1,6 +1,5 @@
 <?php
     require_once('config.php');
-    echo "So far so good";
 
     $prn_no = $_POST['prn'];
     $name = $_POST['name'];
@@ -13,8 +12,9 @@
     $division = $_POST['div'];
     $roll = $_POST['roll'];
 
-    echo $prn_no;
 
     $query_insert = "INSERT INTO `student`(`prn_no`, `name`, `acad_year`, `branch`, `college`, `mobile_number`, `password`, `division`, `roll`) VALUES ('$prn_no','$name','$acad_year','$branch','$college','$mobile_number','$password', '$division', '$roll')";
     $result_insert = mysqli_query($connect, $query_insert);
+    
+    echo "Registration Successful";
 ?>

@@ -1,18 +1,3 @@
-<?php
-require_once("get_student_details.php");
-require_once("get_teacher_details.php");
-
-    $class = $_POST["class"];
-    $division = $_POST["division"];
-
-session_start();
-    $_SESSION["class"] = $class;
-    $_SESSION["division"] = $division;
-    $_SESSION["subject"] = $_POST["subject"];;
-    $_SESSION["lession_plan"] = $_POST["lesson_plan"];
-    
-
-?>
 
 
 <!DOCTYPE html>
@@ -25,24 +10,33 @@ session_start();
     <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
     <link rel="shortcut icon" href="img/favicon.png">
 
-    <title>Attendance</title>
+    <title>Form Component</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-reset.css" rel="stylesheet">
     <!--external css-->
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-datepicker/css/datepicker.css" />
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-colorpicker/css/colorpicker.css" />
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-daterangepicker/daterangepicker.css" />
       <!--right slidebar-->
       <link href="css/slidebars.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="css/style.css" rel="stylesheet">
     <link href="css/style-responsive.css" rel="stylesheet" />
 
+
+
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 tooltipss and media queries -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
       <script src="js/respond.min.js"></script>
     <![endif]-->
+
+
   </head>
 
   <body>
@@ -54,7 +48,7 @@ session_start();
               <i class="fa fa-bars"></i>
           </div>
           <!--logo start-->
-          <a href="index.html" class="logo" >SIT</a>
+          <a href="index.html" class="logo" >Sinhgad</a>
           <!--logo end-->
           <div class="nav notify-row" id="top_menu">
             <!--  notification start -->
@@ -271,7 +265,7 @@ session_start();
                   <li class="dropdown">
                       <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                           <img alt="" src="img/avatar1_small.jpg">
-                          <span class="username">Jhon Doue</span>
+                          <span class="username"></span>
                           <b class="caret"></b>
                       </a>
                       <ul class="dropdown-menu extended logout">
@@ -282,7 +276,6 @@ session_start();
                           <li><a href="login.html"><i class="fa fa-key"></i> Log Out</a></li>
                       </ul>
                   </li>
-
                   <!-- user login dropdown end -->
                   <li class="sb-toggle-right">
                       <i class="fa  fa-align-right"></i>
@@ -297,7 +290,7 @@ session_start();
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
                   <li>
-                      <a class="active" href="index.html">
+                      <a class="active" href="index.php">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
@@ -309,12 +302,9 @@ session_start();
                           <span>Attendance</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="form_component.php">Add Attendace</a></li>
-                          <li><a  href="#">View Attendance</a></li>
+                          <li><a  href="form_component.html">Add Attendace</a></li>
                       </ul>
                   </li>
-
-
               </ul>
               <!-- sidebar menu end-->
           </div>
@@ -323,28 +313,121 @@ session_start();
       <!--main content start-->
       <section id="main-content">
           <section class="wrapper">
+              <!-- page start-->
               <div class="row">
-                              <form action="back.php" method="POST" >
+                  <div class="col-lg-12">
+                      <section class="panel">
+                          <header class="panel-heading">
+                              Enter Class Details
+                          </header>
+                          <div class="panel-body">
+                              <form action = "mark_attendance.php" method = "post">
                                   <div class="form-group">
-                                      <label class="col-sm-2 control-label col-lg-2" for="inputSuccess">Roll Numbers</label>
+                                      <label class="col-sm-2 control-label col-lg-2" for="inputSuccess">YEAR</label>
                                       <div class="col-lg-10">
-                                          <?php
-                                          $data = get_student_details($class, $division);
-                                          foreach ($data as $single_student){
-                                          ?>
-                                          <label class="checkbox-inline">
-                                              <input type="checkbox" name="roll[]" value="<?=$single_student->roll;?>" > <?=$single_student->roll;?>
-                                          </label>
-                                          <?php
-                                          }
-                                          ?>
+                                          <select class="form-control input-sm m-bot15" id="class_list" name = "class">
+                                              <option value="SE">SE</option>
+                                              <option value="TE">TE</option>
+                                              <option value="BE">BE</option>
+                                          </select>
                                       </div>
-                                      
-                                      <button class="btn btn-lg btn-login btn-block" type="submit">Submit Attendance</button>
                                   </div>
-                              </form>
+                                 <div class="form-group">
+                                      <label class="col-sm-2 control-label col-lg-2" for="inputSuccess">DIVISION</label>
+                                      <div class="col-lg-10">
+                                          <select class="form-control input-sm m-bot15" name = "division">
+                                              <option value = "A">A</option>
+                                              <option value = "B">B</option>
+                                              <option value = "C">C</option>
+                                          </select>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label class="col-sm-2 control-label col-lg-2" for="inputSuccess">SUBJECT</label>
+                                      <div class="col-lg-10">
+                                          <select class="form-control input-sm m-bot15" name = "subject">
+                                              <option value = "SDL">SDL</option>
+                                              <option value = "SEP">SEP</option>
+                                              <option value = "ISEE">ISEE</option>
+                                              <option value = "SDL">CN</option>
+                                              <option value = "SEP">DBMS</option>
+                                              <option value = "ISEE">TOC</option>
+                                          </select>
+                                      </div>
+                                  </div>
+                                  
+                                  <!---divisions---- end--->
+
+                                                                    
+                                  
+                                  
+                                 <!---subject---- start--->
+
+                                 <!---subject-->
+            
+                                  <!--date-->
+                                 <div class="form-group">
+                                              <label class="col-sm-2 control-label">Date</label>
+                                              
+                                                  <script>
+                                                
+
+                                                var today = new Date();
+                                                var dd = today.getDate();
+                                                var mm = today.getMonth()+1; //January is 0!
+                                                var yyyy = today.getFullYear();
+
+                                                if(dd<10) {
+                                                    dd = '0'+dd
+                                                } 
+
+                                                if(mm<10) {
+                                                    mm = '0'+mm
+                                                } 
+
+                                                today = mm + '/' + dd + '/' + yyyy;
+                                                document.write(today);
+
+                                                </script>
+  
+                                                  
+                                              </div>
+                                  
+                                  
+                                          
+                                <!--end date>
+                                  <!----messgae panel---->
+                                  <div class="row">
+                                  <header class="panel-heading">
+                                      
+                                  </header>
+                                  <div class="panel-body">
+                                      <div class="form">
+                                          <form action="#" class="form-horizontal">
+                                              <div class="form-group">
+                                                  <label class="col-sm-2 control-label col-sm-2">LESSON PLAN</label>
+                                                  <div class="col-sm-10">
+                                                      <textarea class="form-control ckeditor" name="editor1" rows="6" name = "lesson_plan"></textarea>
+                                                  </div>
+                                              </div>
+                                          </form>
+                                      </div>
+                                  </div>
                           </div>
-                          
+                      
+
+                                  <!---message panel end--->
+                              </form>
+
+                          </div>
+                      </section>
+                  </div>
+                  
+         </div>
+               <button type="button" class="btn btn-success">GO!</button>
+                                 
+
+                                 
               <!-- page end-->
           </section>
       </section>
@@ -508,17 +591,38 @@ session_start();
     <!-- js placed at the end of the document so the pages load faster -->
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
     <script src="js/jquery.scrollTo.min.js"></script>
     <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
-    <script src="js/respond.min.js" ></script>
+
+    <script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+    <script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
+
+  <!--custom switch-->
+  <script src="js/bootstrap-switch.js"></script>
+  <!--custom tagsinput-->
+  <script src="js/jquery.tagsinput.js"></script>
+  <!--custom checkbox & radio-->
+  <script type="text/javascript" src="js/ga.js"></script>
+
+  <script type="text/javascript" src="assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+  <script type="text/javascript" src="assets/bootstrap-daterangepicker/date.js"></script>
+  <script type="text/javascript" src="assets/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script type="text/javascript" src="assets/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+  <script type="text/javascript" src="assets/ckeditor/ckeditor.js"></script>
+
+  <script type="text/javascript" src="assets/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
+  <script src="js/respond.min.js" ></script>
 
   <!--right slidebar-->
   <script src="js/slidebars.min.js"></script>
 
-    <!--common script for all pages-->
-    <script src="js/common-scripts.js"></script>
 
+  <!--common script for all pages-->
+  <script src="js/common-scripts.js"></script>
+
+  <!--script for this page-->
+  <script src="js/form-component.js"></script>
 
   </body>
 </html>
+

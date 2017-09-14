@@ -128,10 +128,10 @@
                                                         <select class="form-control" name="year" required>
                                                             <option disabled="" selected=""></option>
                                                             <option disabled="" style="font-weight: 900;">--Bachelor's--</option>
-                                                            <option value="First Year"> First Year </option>
-                                                            <option value="Sxecond Year"> Second Year </option>
-                                                            <option value="Third Year"> Third Year </option>
-                                                            <option value="Fourth Year"> Fourth Year </option>
+                                                            <option value="First Year">FE</option>
+                                                            <option value="Sxecond Year">SE</option>
+                                                            <option value="Third Year">TE</option>
+                                                            <option value="Fourth Year">BE</option>
                                                             <option disabled="" style="font-weight: 900;">--Master's--</option>
                                                             <option value="ME First Year"> First Year </option>
                                                             <option value="ME Second Year"> Second Year </option>
@@ -154,11 +154,7 @@
                                                         <label class="control-label">College</label>
                                                         <select class="form-control" name="college" required>
                                                             <option disabled="" selected=""></option>
-                                                            <option value="LOL">LOL</option>
-                                                            <option value="LOL">LOL</option>
-                                                            <option value="LOL">LOL</option>
-                                                            <option value="LOL">LOL</option>
-                                                            <option value="LOL">LOL</option>
+                                                            <option value="SIT">Singad Institutes</option>
                                                         </select>
 
                                                     </div>
@@ -188,9 +184,9 @@
                                                         <label class="control-label">Division</label>
                                                         <select class="form-control" name="div" required>
                                                             <option disabled="" selected=""></option>
-                                                            <option value="A"> TEA </option>
-                                                            <option value="B"> TEB </option>
-                                                            <option value="C"> TEC </option>
+                                                            <option value="A">A</option>
+                                                            <option value="B">B</option>
+                                                            <option value="C">C</option>
                                                         </select>
                                                     </div>
                                                 </div>
