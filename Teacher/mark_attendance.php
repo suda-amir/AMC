@@ -64,7 +64,7 @@ require_once("get_teacher_details.php");
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
                   <li>
-                      <a class="active" href="index.html">
+                      <a class="active" href="index.php">
                           <i class="fa fa-dashboard"></i>
                           <span>Dashboard</span>
                       </a>
@@ -76,8 +76,18 @@ require_once("get_teacher_details.php");
                           <span>Attendance</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="form_component.php">Add Attendace</a></li>
-                          <li><a  href="#">View Attendance</a></li>
+                          <li><a  href="add_attendance.php">Add Attendance</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-laptop"></i>
+                          <span>View Attendance</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="daily.php">Date Wise</a></li>
+                          <li><a  href="montly.php">Month Wise</a></li>
                       </ul>
                   </li>
 
@@ -85,6 +95,7 @@ require_once("get_teacher_details.php");
               </ul>
               <!-- sidebar menu end-->
           </div>
+      </aside>
       </aside>
       <!--sidebar end-->
       <!--main content start-->

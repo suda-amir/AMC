@@ -12,7 +12,7 @@ require_once('config.php');
     <meta name="keyword" content="FlatLab, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
     <link rel="shortcut icon" href="img/favicon.png">
 
-    <title>Sinhgad Tenical Education Society</title>
+    <title>Sinhgad Technical Education Society</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -80,8 +80,8 @@ require_once('config.php');
                           <span>View Attendance</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="../daily.php">Date Wise</a></li>
-                          <li><a  href="../daily.php">Month Wise</a></li>
+                          <li><a  href="daily.php">Date Wise</a></li>
+                          <li><a  href="montly.php">Month Wise</a></li>
                       </ul>
                   </li>
 
@@ -91,6 +91,7 @@ require_once('config.php');
           </div>
       </aside>
       <!--sidebar end-->
+      </section>
 
 
     <!-- js placed at the end of the document so the pages load faster -->
