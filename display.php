@@ -2,7 +2,7 @@
 
   <?php
             require_once("config.php");
-            $subject = "SDL";
+            $subject = "ISEE";
             $year = "TE";
             $division = "B";
             $date = "2017-09-14";

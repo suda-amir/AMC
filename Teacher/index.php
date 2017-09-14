@@ -1,6 +1,7 @@
 
 <?php
 require_once('config.php');
+echo $_SESSION['tn'];
 ?>
 <!DOCTYPE html>
 <html lang="en">

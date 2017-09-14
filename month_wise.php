@@ -1,13 +1,14 @@
 
   <?php
             require_once("config.php");
+            $subject = "SDL";
             $year = "TE";
             $division = "B";
-            $date = "2017-09-14";
+            $month = 9;
             $total = 0;
 
 
-            $query = "SELECT `subject`, `class`, `division`, `date`, `count`, `lesson_plan` FROM `attendance_record` WHERE `class` = '$year' AND `division` = '$division' AND `date` = '$date'";
+            $query = "SELECT `subject`, `class`, `division`, `date`, `count`, `lesson_plan` FROM `attendance_record` WHERE `class` = '$year' AND `division` = '$division' AND MONTH(date) = '$month'";
 
 
             $result = mysqli_query($connect, $query);
@@ -104,7 +105,7 @@
               <!-- page start-->
               <section class="panel">
                   <header class="panel-heading">
-                      ATTENDANCE RECORD - <?php echo "$date"; ?>
+                      ATTENDANCE RECORD OF MONTH- <?php echo "$month"; ?>
                   </header>
                   <header class="panel-heading">
                       Total students:  <?php echo $data["total"]; ?>
