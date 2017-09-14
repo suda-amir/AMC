@@ -1,10 +1,9 @@
 
   <?php
             require_once("config.php");
-            $subject = "SDL";
-            $year = "TE";
-            $division = "B";
-            $month = 9;
+            $year = $_POST["class"];
+            $division = $POST["division"];
+            $month = $_POST["month"];
             $total = 0;
 
 

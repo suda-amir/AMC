@@ -1,9 +1,9 @@
 
   <?php
             require_once("config.php");
-            $year = "TE";
-            $division = "B";
-            $date = "2017-09-14";
+            $year = $_POST["class"];
+            $division = $_POST["division"];
+            $date = $_POST["date"];
             $total = 0;
 
 
@@ -15,7 +15,7 @@
             $query2 = "SELECT count(*) as total FROM `student` WHERE `acad_year` = '$year' AND `division` = '$division'";
             $result2 = mysqli_query($connect, $query2);
             $data=mysqli_fetch_array($result2);
-             
+var_dump($result)
                          
           ?>
           

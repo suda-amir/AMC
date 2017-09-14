@@ -70,8 +70,18 @@ require_once('config.php');
                           <span>Attendance</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="add_attendance.php">Add Attendace</a></li>
-                          <li><a  href="../display.php">View Attendance</a></li>
+                          <li><a  href="add_attendance.php">Add Attendance</a></li>
+                      </ul>
+                  </li>
+                  
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-laptop"></i>
+                          <span>View Attendance</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="../daily.php">Date Wise</a></li>
+                          <li><a  href="../daily.php">Month Wise</a></li>
                       </ul>
                   </li>
 
