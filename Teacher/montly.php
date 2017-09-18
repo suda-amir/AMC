@@ -67,6 +67,7 @@
           </div>
           <!--logo start-->
           <a href="index.php" class="logo" >Sinhgad Institute of Technology</a>
+          <img src="img/STES.jpg" height="60" width="130" align = "right">
           <!--logo end-->
 
       </header>
@@ -101,6 +102,18 @@
                       <ul class="sub">
                           <li><a  href="daily.php">Date Wise</a></li>
                           <li><a  href="montly.php">Month Wise</a></li>
+                          <li><a href="particular.php">Record Wise</a></li>
+                      </ul>
+                  </li>
+                  
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-laptop"></i>
+                          <span>Register</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="../Student/register.php">New Student</a></li>
+                          <li><a  href="../Student/teacherRegister.php">New Faculty</a></li>
                       </ul>
                   </li>
 
@@ -154,7 +167,7 @@
                                           </select>
                                       </div>
                                   </div>
-                                  <div class="form-group">
+                                <!--  <div class="form-group">
                                       <label class="col-sm-2 control-label col-lg-2" for="inputSuccess">SUBJECT</label>
                                       <div class="col-lg-10">
                                           <select class="form-control input-sm m-bot15" name = "subject">
@@ -165,8 +178,8 @@
                                               <option value = "SEP">DBMS</option>
                                               <option value = "ISEE">TOC</option>
                                           </select>
-                                      </div>
-                                  </div>
+                                      </div>  
+                                  </div>   -->
 								   <div class="form-group">
                                       <label class="col-sm-2 control-label col-lg-2" for="inputSuccess">MONTH</label>
                                       <div class="col-lg-10">

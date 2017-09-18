@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 
   <?php
-            require_once("config.php");
-            $subject = "ISEE";
-            $year = "TE";
-            $division = "B";
-            $date = "2017-09-14";
-            $query = "SELECT `subject`, `class`, `division`, `date`, `attend_array`, `lesson_plan` FROM `attendance_record` WHERE `division` = '$division' AND `class` = '$year' AND `subject` = '$subject' AND `date` = '$date'";
+            require_once("../config.php");
+            $subject = $_POST["subject"];
+            $year = $_POST["class"];
+            $division = $_POST["division"];
+            $date = $_POST["date"];
+            
+            $parts = explode('-',$date);
+            $yyyy_mm_dd = $parts[2] . '-' . $parts[0] . '-' . $parts[1];
+
+
+            $query = "SELECT `subject`, `class`, `division`, `date`, `attend_array`, `lesson_plan` FROM `attendance_record` WHERE `division` = '$division' AND `class` = '$year' AND `subject` = '$subject' AND `date` = '$yyyy_mm_dd'";
             $result = mysqli_query($connect, $query);
           
-             
+            
+
                          
           ?>
           
@@ -59,6 +65,7 @@
               </div>
             <!--logo start-->
             <a href="Teacher/index.php" class="logo">SINHGAD<span> INSTITUTES OF TECHNOLOGY</span></a>
+          <img src="img/STES.jpg" height="60" width="130" align = "right">
             <!--logo end-->
         </header>
       <!--header end-->
@@ -80,8 +87,30 @@
                           <span>Attendance</span>
                       </a>
                       <ul class="sub">
-                          <li><a  href="add_attendance.php">Add Attendace</a></li>
-                          <li><a  href="../display.php">View Attendance</a></li>
+                          <li><a  href="add_attendance.php">Add Attendance</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-laptop"></i>
+                          <span>View Attendance</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="daily.php">Date Wise</a></li>
+                          <li><a  href="montly.php">Month Wise</a></li>
+                          <li><a href="particular.php">Record Wise</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-laptop"></i>
+                          <span>Register</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="../Student/register.php">New Student</a></li>
+                          <li><a  href="../Student/teacherRegister.php">New Faculty</a></li>
                       </ul>
                   </li>
 
@@ -98,7 +127,8 @@
               <!-- page start-->
               <section class="panel">
                   <header class="panel-heading">
-                      ATTENDANCE RECORD
+                      ATTENDANCE RECORD<br><?php echo $date.'<br>';
+                                                 echo $subject;?>
                   </header>
                   <div class="panel-body">
                       <div class="adv-table editable-table ">
@@ -124,10 +154,10 @@
                                     <td>class</td>  
                                     <td>division</td>  
                                     <td>Present rollNo</td>  
-                                    <td>Lesson Plan</td>
                               </tr>
                               </thead>
                               <?php
+                              
                          if($result)
                           while($row =  mysqli_fetch_array($result))  
                           {
@@ -140,7 +170,7 @@
                                    <td><?php echo $row["class"];?></td> 
                                    <td><?php echo $row["division"];?></td>  
                                     <td><?php echo $arr[$i];?></td>
-                                    <td><?php echo $row["lesson_plan"];?></td>
+                                   
 				               </tr>  
                                <?php }
                                 

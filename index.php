@@ -36,7 +36,7 @@
                 <div class="btn-row" style="padding-left: 15%;">
                         <div class="btn-group" data-toggle="buttons">
                             <label class="btn btn-default">
-                                <input type="radio" name="options" id="Teacher" value="1"> Teacher
+                                <input type="radio" name="options" id="Teacher" value="1" checked> Teacher
                             </label>
                             <label class="btn btn-default">
                                 <input type="radio" name="options" id="Student" value="2"> Student
@@ -56,6 +56,13 @@
                     <div class="registration">
                         New Student?
                         <a class="" href="Student/register.php">
+                            Register Here!
+                        </a>
+                    </div>
+                    
+                    <div class="registration">
+                        New Faculty?
+                        <a class="" href="Student/teacherRegister.php">
                             Register Here!
                         </a>
                     </div>

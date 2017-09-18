@@ -43,7 +43,7 @@
 		            <!--      Wizard container        -->
 		            <div class="wizard-container">
 		                <div class="card wizard-card" data-color="red" id="wizard">
-		                    <form action="submit.php" method="POST">
+		                    <form action="submit_teacher.php" method="POST">
 		                <!--        You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"             -->
 
 		                    	<div class="wizard-header">
@@ -71,8 +71,8 @@
                                                         <i class="material-icons">face</i>
                                                     </span>
                                                     <div class="form-group label-floating">
-                                                        <label class="control-label">Username <small>(required)</small></label>
-                                                        <input name="name" type="text" class="form-control" required>
+                                                        <label class="control-label">Username <small>(Sinhgad email)</small></label>
+                                                        <input name="username" type="text" class="form-control" required>
                                                     </div>
                                                 </div>
 
@@ -95,9 +95,6 @@
                                                     </div>
                                                 </div>
 												
-                                                
-                                            </div>
-                                            <div class="col-sm-6">
                                                 <div class="input-group">
                                                     <span class="input-group-addon">
                                                         <i class="material-icons">lock_outline</i>
@@ -108,18 +105,8 @@
 
                                                     </div>
                                                 </div>
-
-                                               <div class="input-group">
-                                                    <span class="input-group-addon">
-                                                        <i class="material-icons">library_books</i>                                                   </span>
-                                                    
-                                                    <div class="form-group label-floating">
-                                                        <label class="control-label">Subject</label>
-                                                        <input name="name" type="text" class="form-control" required>
-                                                    </div>
-                                                </div>
-
-                                                </div>
+                                            </div>
+                                           
                                                 
                                             </div>
 

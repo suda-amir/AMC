@@ -16,5 +16,5 @@
     $query_insert = "INSERT INTO `student`(`prn_no`, `name`, `acad_year`, `branch`, `college`, `mobile_number`, `password`, `division`, `roll`) VALUES ('$prn_no','$name','$acad_year','$branch','$college','$mobile_number','$password', '$division', '$roll')";
     $result_insert = mysqli_query($connect, $query_insert);
     
-    echo "Registration Successful";
+    header('location: ../index.php');
 ?>

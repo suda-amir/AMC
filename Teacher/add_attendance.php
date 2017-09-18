@@ -49,6 +49,7 @@
           </div>
           <!--logo start-->
           <a href="index.php" class="logo" >Sinhgad Institutes of Technology</a>
+          <img src="img/STES.jpg" height="60" width="130" align = "right">
           <!--logo end-->
 
       </header>
@@ -83,6 +84,7 @@
                       <ul class="sub">
                           <li><a  href="daily.php">Date Wise</a></li>
                           <li><a  href="montly.php">Month Wise</a></li>
+                          <li><a href="particular.php">Record Wise</a></li>
                       </ul>
                   </li>
 

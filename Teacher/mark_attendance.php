@@ -55,6 +55,7 @@ require_once("get_teacher_details.php");
           </div>
           <!--logo start-->
           <a href="index.html" class="logo" >SIT</a>
+          <img src="img/STES.jpg" height="60" width="130" align = "right">
           <!--logo end-->
       </header>
       <!--header end-->
@@ -88,6 +89,18 @@ require_once("get_teacher_details.php");
                       <ul class="sub">
                           <li><a  href="daily.php">Date Wise</a></li>
                           <li><a  href="montly.php">Month Wise</a></li>
+                          <li><a href="particular.php">Record Wise</a></li>
+                      </ul>
+                  </li>
+                  
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-laptop"></i>
+                          <span>Register</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="../Student/register.php">New Student</a></li>
+                          <li><a  href="../Student/teacherRegister.php">New Faculty</a></li>
                       </ul>
                   </li>
 
