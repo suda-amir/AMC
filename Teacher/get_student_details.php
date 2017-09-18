@@ -2,8 +2,6 @@
 
 require_once("config.php");
 function get_student_details ($class, $division){
-    
-    
 
     try {
         $db = getDB();
