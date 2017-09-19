@@ -23,6 +23,8 @@ function getDB() {
     }
 }
 
+$connect = mysqli_connect("localhost","root","","amc");
+
 /* START GENERAL CONFIGURATION */
 define ('CONF_NAME', "AMC");
 define ('HOST_NAME', "Sinhgad Institute of Technology");

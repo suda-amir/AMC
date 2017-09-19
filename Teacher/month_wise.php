@@ -127,7 +127,8 @@
               <!-- page start-->
               <section class="panel">
                   <header class="panel-heading">
-                      ATTENDANCE RECORD OF MONTH- <?php echo "$month"; ?>
+                      ATTENDANCE RECORD OF MONTH- <?php echo "$month"; ?><br>
+                      DIVISION - <?php echo $year."-".$division; ?>
                   </header>
                   <header class="panel-heading">
                       Total students:  <?php echo $data["total"]; ?>
@@ -155,8 +156,6 @@
                               <tr>
                                     <td>FACULTY</td>
                                     <td>SUBJECT</td>  
-                                    <td>CLASS</td>  
-                                    <td>DIVISION</td>  
                                     <td>TOTAL PRESENT</td>
                                    
                               </tr>
@@ -169,8 +168,6 @@
                                <tr> 
                                      <td>'.$row["teacher"].'</td>
                                     <td>'.$row["subject"].'</td> 
-                                    <td>'.$row["class"].'</td>
-                                    <td>'.$row["division"].'</td>
                                     <td>'.$row["count"].'</td> 
         
 				               </tr>  

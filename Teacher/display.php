@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
   <?php
+            //require_once("get_student_details.php");
             require_once("../config.php");
             $subject = $_POST["subject"];
             $year = $_POST["class"];
@@ -13,6 +14,10 @@
 
             $query = "SELECT `subject`, `class`, `division`, `date`, `attend_array`, `lesson_plan` FROM `attendance_record` WHERE `division` = '$division' AND `class` = '$year' AND `subject` = '$subject' AND `date` = '$yyyy_mm_dd'";
             $result = mysqli_query($connect, $query);
+
+            
+
+            
           
             
 
@@ -151,9 +156,8 @@
                           <table class="table table-striped table-hover table-bordered" id="editable-sample">
                               <thead>
                               <tr>
-                                    <td>class</td>  
-                                    <td>division</td>  
-                                    <td>Present rollNo</td>  
+                                    <td>Present rollNo</td>
+                                    <td>Name</td>
                               </tr>
                               </thead>
                               <?php
@@ -166,17 +170,22 @@
                                 $arr_count = count($arr);
                               
                                 for($i = 0 ; $i < $arr_count; $i++){?>
-                                    <tr>  
-                                   <td><?php echo $row["class"];?></td> 
-                                   <td><?php echo $row["division"];?></td>  
+                                    <tr>    
                                     <td><?php echo $arr[$i];?></td>
+                                        <td><?php $query2 = "SELECT * FROM `student` WHERE `acad_year`='$year' AND `division` = '$division' AND `roll` = '$arr[$i]'";
+                                                                    $result2 = mysqli_query($connect, $query2);
+                                                                    if($result2)
+                                                                        while($row2 =  mysqli_fetch_array($result2))
+                                                                        echo $row2["name"]; ?></td>
+                                    
                                    
 				               </tr>  
                                <?php }
                                 
                           }  ?>
-                          </table>
-
+                          </table> 
+                              
+                              
                           </div>
                       </div>
                   </div>

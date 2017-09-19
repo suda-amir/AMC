@@ -128,10 +128,11 @@ $yyyy_mm_dd = $parts[2] . '-' . $parts[0] . '-' . $parts[1];
               <!-- page start-->
               <section class="panel">
                   <header class="panel-heading">
-                      ATTENDANCE RECORD - <?php echo "$date"; ?>
+                      ATTENDANCE RECORD - <?php echo "$date"; ?><br>
+                      DIVISION - <?php echo $year."-".$division; ?>
                   </header>
                   <header class="panel-heading">
-                      Total students:  <?php echo $data["total"]; ?>
+                      TOTAL STRENGTH:  <?php echo $data["total"]; ?>
                   </header>
                   <div class="panel-body">
                       <div class="adv-table editable-table ">
@@ -156,8 +157,6 @@ $yyyy_mm_dd = $parts[2] . '-' . $parts[0] . '-' . $parts[1];
                               <tr>
                                     <td>FACULTY</td>
                                     <td>SUBJECT</td>  
-                                    <td>CLASS</td>  
-                                    <td>DIVISION</td>  
                                     <td>TOTAL PRESENT</td>
                                    
                               </tr>
@@ -170,8 +169,6 @@ $yyyy_mm_dd = $parts[2] . '-' . $parts[0] . '-' . $parts[1];
                                <tr> 
                                     <td>'.$row["teacher"].'</td>
                                     <td>'.$row["subject"].'</td> 
-                                    <td>'.$row["class"].'</td>
-                                    <td>'.$row["division"].'</td>
                                     <td>'.$row["count"].'</td> 
         
 				               </tr>  
