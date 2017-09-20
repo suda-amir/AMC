@@ -105,7 +105,7 @@
                                 <li><a href="particular.php">Record Wise</a></li>
                             </ul>
                         </li>
-                        
+
                         <li class="sub-menu">
                             <a href="javascript:;" >
                                 <i class="fa fa-laptop"></i>
@@ -145,7 +145,7 @@
                                     Enter Class Details
                                 </header>
                                 <div class="panel-body">
-                                    <form action = "student_count_back.php" method = "post">
+                                    <form action = "overall_sub_back.php" method = "post">
                                         <div class="form-group">
                                             <label class="col-sm-2 control-label col-lg-2" for="inputSuccess">DEPARTMENT</label>
                                             <div class="col-lg-10">
@@ -158,19 +158,7 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="col-sm-2 control-label col-lg-2" for="inputSuccess">SUBJECT</label>
-                                            <div class="col-lg-10">
-                                                <select class="form-control input-sm m-bot15" name="subject">
-                                                    <option value = "SDL">SDL</option>
-                                                    <option value = "SEP">SEP</option>
-                                                    <option value = "ISEE">ISEE</option>
-                                                    <option value = "SDL">CN</option>
-                                                    <option value = "SEP">DBMS</option>
-                                                    <option value = "ISEE">TOC</option>
-                                                </select>
-                                            </div>
-                                        </div> 
+                                    
                                         <div class="form-group">
                                             <label class="col-sm-2 control-label col-lg-2" for="inputSuccess">YEAR</label>
                                             <div class="col-lg-10">
@@ -216,7 +204,7 @@
                                                 <input class="form-control form-control-inline input-medium default-date-picker"  size="20" type="text" value="" name = "date" />
                                             </div>
                                         </div>
-                                        
+
                                         <div class="form-group">
                                             <label class="control-label col-md-2">TO</label>
                                             <div class="col-md-3 col-xs-11">
@@ -227,136 +215,136 @@
                                         <input type="submit" class="btn btn-success" value="GO!">
 
                                     </form>
-                            
+
 
                                 </div>
                             </section>
+                        </div>
                     </div>
-                    </div>
+                </section>
             </section>
         </section>
-        </section>
-    <!-- js placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
-    <script src="js/jquery.scrollTo.min.js"></script>
-    <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
-    <script src="js/respond.min.js" ></script>
+        <!-- js placed at the end of the document so the pages load faster -->
+        <script src="js/jquery.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
+        <script src="js/jquery.scrollTo.min.js"></script>
+        <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+        <script src="js/respond.min.js" ></script>
 
-    <!--this page plugins-->
+        <!--this page plugins-->
 
-    <script type="text/javascript" src="assets/fuelux/js/spinner.min.js"></script>
-    <script type="text/javascript" src="assets/bootstrap-fileupload/bootstrap-fileupload.js"></script>
-    <script type="text/javascript" src="assets/bootstrap-wysihtml5/wysihtml5-0.3.0.js"></script>
-    <script type="text/javascript" src="assets/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
-    <script type="text/javascript" src="assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
-    <script type="text/javascript" src="assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
-    <script type="text/javascript" src="assets/bootstrap-daterangepicker/moment.min.js"></script>
-    <script type="text/javascript" src="assets/bootstrap-daterangepicker/daterangepicker.js"></script>
-    <script type="text/javascript" src="assets/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
-    <script type="text/javascript" src="assets/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
-    <script type="text/javascript" src="assets/jquery-multi-select/js/jquery.multi-select.js"></script>
-    <script type="text/javascript" src="assets/jquery-multi-select/js/jquery.quicksearch.js"></script>
+        <script type="text/javascript" src="assets/fuelux/js/spinner.min.js"></script>
+        <script type="text/javascript" src="assets/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+        <script type="text/javascript" src="assets/bootstrap-wysihtml5/wysihtml5-0.3.0.js"></script>
+        <script type="text/javascript" src="assets/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
+        <script type="text/javascript" src="assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script type="text/javascript" src="assets/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+        <script type="text/javascript" src="assets/bootstrap-daterangepicker/moment.min.js"></script>
+        <script type="text/javascript" src="assets/bootstrap-daterangepicker/daterangepicker.js"></script>
+        <script type="text/javascript" src="assets/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+        <script type="text/javascript" src="assets/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+        <script type="text/javascript" src="assets/jquery-multi-select/js/jquery.multi-select.js"></script>
+        <script type="text/javascript" src="assets/jquery-multi-select/js/jquery.quicksearch.js"></script>
 
-    <!--select2-->
-    <script type="text/javascript" src="assets/select2/js/select2.min.js"></script>
+        <!--select2-->
+        <script type="text/javascript" src="assets/select2/js/select2.min.js"></script>
 
-    <!--summernote-->
-    <script src="assets/summernote/dist/summernote.min.js"></script>
+        <!--summernote-->
+        <script src="assets/summernote/dist/summernote.min.js"></script>
 
-    <!--right slidebar-->
-    <script src="js/slidebars.min.js"></script>
+        <!--right slidebar-->
+        <script src="js/slidebars.min.js"></script>
 
 
-    <!--this page  script only-->
-    <script src="js/advanced-form-components.js"></script>
+        <!--this page  script only-->
+        <script src="js/advanced-form-components.js"></script>
 
-    <!--bootstrap-switch-->
-    <script src="assets/bootstrap-switch/static/js/bootstrap-switch.js"></script>
+        <!--bootstrap-switch-->
+        <script src="assets/bootstrap-switch/static/js/bootstrap-switch.js"></script>
 
-    <!--bootstrap-switch-->
-    <script src="assets/switchery/switchery.js"></script>
+        <!--bootstrap-switch-->
+        <script src="assets/switchery/switchery.js"></script>
 
-    <!--common script for all pages-->
-    <script src="js/common-scripts.js"></script>
+        <!--common script for all pages-->
+        <script src="js/common-scripts.js"></script>
 
-    <script>
+        <script>
 
-        jQuery(document).ready(function(){
+            jQuery(document).ready(function(){
 
-            $('.summernote').summernote({
-                height: 200,                 // set editor height
+                $('.summernote').summernote({
+                    height: 200,                 // set editor height
 
-                minHeight: null,             // set minimum height of editor
-                maxHeight: null,             // set maximum height of editor
+                    minHeight: null,             // set minimum height of editor
+                    maxHeight: null,             // set maximum height of editor
 
-                focus: true                 // set focus to editable area after initializing summernote
+                    focus: true                 // set focus to editable area after initializing summernote
+                });
             });
-        });
 
-    </script>
+        </script>
 
-    <!--select2-->
-    <script type="text/javascript">
+        <!--select2-->
+        <script type="text/javascript">
 
-        $(document).ready(function () {
-            $(".js-example-basic-single").select2();
+            $(document).ready(function () {
+                $(".js-example-basic-single").select2();
 
-            $(".js-example-basic-multiple").select2();
-        });
-    </script>
+                $(".js-example-basic-multiple").select2();
+            });
+        </script>
 
-    <!--bootstrap swither-->
-    <script type="text/javascript">
-        $(document).ready(function () {
-            // Resets to the regular style
-            $('#dimension-switch').bootstrapSwitch('setSizeClass', '');
-            // Sets a mini switch
-            $('#dimension-switch').bootstrapSwitch('setSizeClass', 'switch-mini');
-            // Sets a small switch
-            $('#dimension-switch').bootstrapSwitch('setSizeClass', 'switch-small');
-            // Sets a large switch
-            $('#dimension-switch').bootstrapSwitch('setSizeClass', 'switch-large');
-
-
-            $('#change-color-switch').bootstrapSwitch('setOnClass', 'success');
-            $('#change-color-switch').bootstrapSwitch('setOffClass', 'danger');
-        });
-    </script>
-
-    <!-- swithery-->
-    <script type="text/javascript">
-        $(document).ready(function () {
-            //default
-            var elem = document.querySelector('.js-switch');
-            var init = new Switchery(elem);
+        <!--bootstrap swither-->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                // Resets to the regular style
+                $('#dimension-switch').bootstrapSwitch('setSizeClass', '');
+                // Sets a mini switch
+                $('#dimension-switch').bootstrapSwitch('setSizeClass', 'switch-mini');
+                // Sets a small switch
+                $('#dimension-switch').bootstrapSwitch('setSizeClass', 'switch-small');
+                // Sets a large switch
+                $('#dimension-switch').bootstrapSwitch('setSizeClass', 'switch-large');
 
 
-            //small
-            var elem = document.querySelector('.js-switch-small');
-            var switchery = new Switchery(elem, { size: 'small' });
+                $('#change-color-switch').bootstrapSwitch('setOnClass', 'success');
+                $('#change-color-switch').bootstrapSwitch('setOffClass', 'danger');
+            });
+        </script>
 
-            //large
-            var elem = document.querySelector('.js-switch-large');
-            var switchery = new Switchery(elem, { size: 'large' });
-
-
-            //blue color
-            var elem = document.querySelector('.js-switch-blue');
-            var switchery = new Switchery(elem, { color: '#7c8bc7', jackColor: '#9decff' });
-
-            //green color
-            var elem = document.querySelector('.js-switch-yellow');
-            var switchery = new Switchery(elem, { color: '#FFA400', jackColor: '#ffffff' });
-
-            //red color
-            var elem = document.querySelector('.js-switch-red');
-            var switchery = new Switchery(elem, { color: '#ff6c60', jackColor: '#ffffff' });
+        <!-- swithery-->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                //default
+                var elem = document.querySelector('.js-switch');
+                var init = new Switchery(elem);
 
 
-        });
-    </script>
+                //small
+                var elem = document.querySelector('.js-switch-small');
+                var switchery = new Switchery(elem, { size: 'small' });
+
+                //large
+                var elem = document.querySelector('.js-switch-large');
+                var switchery = new Switchery(elem, { size: 'large' });
+
+
+                //blue color
+                var elem = document.querySelector('.js-switch-blue');
+                var switchery = new Switchery(elem, { color: '#7c8bc7', jackColor: '#9decff' });
+
+                //green color
+                var elem = document.querySelector('.js-switch-yellow');
+                var switchery = new Switchery(elem, { color: '#FFA400', jackColor: '#ffffff' });
+
+                //red color
+                var elem = document.querySelector('.js-switch-red');
+                var switchery = new Switchery(elem, { color: '#ff6c60', jackColor: '#ffffff' });
+
+
+            });
+        </script>
 
     </body>
 </html>

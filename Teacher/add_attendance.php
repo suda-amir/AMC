@@ -87,6 +87,17 @@
                           <li><a href="particular.php">Record Wise</a></li>
                       </ul>
                   </li>
+                  
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-laptop"></i>
+                          <span>Get Total</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="student_count.php">Individual</a></li>
+                          <li><a  href="overall_subjects.php">Overall</a></li>
+                      </ul>
+                  </li>
 
 
               </ul>
@@ -134,7 +145,7 @@
                                               <option value = "SEP">SEP</option>
                                               <option value = "ISEE">ISEE</option>
                                               <option value = "SDL">CN</option>
-                                              <option value = "SEP">DBMS</option>
+                                              <option value = "DBMS">DBMS</option>
                                               <option value = "ISEE">TOC</option>
                                           </select>
                                       </div>

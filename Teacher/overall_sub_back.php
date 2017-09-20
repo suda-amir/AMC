@@ -6,7 +6,6 @@ $division = $_POST["division"];
 $start_date = '09-18-2017';
 $end_date = '09-20-2017';
 $roll = $_POST["roll"];
-$subject = $_POST["subject"];
 $total = 0;
 $count = 0;
 
@@ -32,13 +31,13 @@ $parts = explode('-',$endDate);
 $yyyy_mm_dd2 = $parts[2] . '-' . $parts[0] . '-' . $parts[1];
 
 
-$query = "SELECT * FROM `attendance_record` WHERE `subject` = '$subject' AND `class` = '$year' AND `division` = '$division' AND `date` BETWEEN '$yyyy_mm_dd' AND '$yyyy_mm_dd2'";
+$query = "SELECT * FROM `attendance_record` WHERE `class` = '$year' AND `division` = '$division' AND `date` BETWEEN '$yyyy_mm_dd' AND '$yyyy_mm_dd2'";
 //var_dump($query);
 
 $result = mysqli_query($connect, $query);
 //var_dump($result);
 
-$query2 = "SELECT count(subject) as total FROM `attendance_record` WHERE `subject` = '$subject'";
+$query2 = "SELECT count(subject) as total FROM `attendance_record`";
 $result2 = mysqli_query($connect, $query2);
 ?>
 
@@ -125,7 +124,7 @@ $result2 = mysqli_query($connect, $query2);
                                 <li><a  href="particular.php">Record Wise</a></li>
                             </ul>
                         </li>
-                        
+
                         <li class="sub-menu">
                             <a href="javascript:;" >
                                 <i class="fa fa-laptop"></i>
@@ -164,7 +163,7 @@ $result2 = mysqli_query($connect, $query2);
                             ATTENDANCE RECORD OF MONTH- <br>
                             DIVISION - <?php echo $year."-".$division; ?>
                         </header>
-                        
+
                         <div class="panel-body">
                             <div class="adv-table editable-table ">
                                 <div class="clearfix">
@@ -205,7 +204,7 @@ $result2 = mysqli_query($connect, $query2);
                                         <tr> 
                                             <?php if($arr[$i] == $roll){ ?>
                                             <td><?php echo $arr[$i];
-                                                $count ++;?></td>   
+                                                                        $count ++;?></td>   
                                             <td><?php echo $row["subject"]; ?></td>
                                             <td><?php echo $row["date"]; ?></td>
                                             <?php } ?>
@@ -217,18 +216,18 @@ $result2 = mysqli_query($connect, $query2);
                                     </table>
                                     <br>
                                     Total Lectures Conducted: <?php if($result2){
-                                                                        while($row2 = mysqli_fetch_array($result2)){
-                                                                            echo $row2["total"];
-                                                                            $x = $row2["total"];
-                                                                        }
-                                                                    }
-                                                              ?><br>
-                                    
+    while($row2 = mysqli_fetch_array($result2)){
+        echo $row2["total"];
+        $x = $row2["total"];
+    }
+}
+                                    ?><br>
+
                                     Total Lectures Attended: <?php echo $count; ?><br>
-                                    
+
                                     Total Lectures Attended: <?php $per = ($count/$x)*100;
-                                                                   echo $per." %";
-                                                             ?><br>
+                                    echo $per." %";
+                                    ?><br>
                                 </div>
                             </div>
                         </div>

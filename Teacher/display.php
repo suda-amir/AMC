@@ -107,6 +107,18 @@
                           <li><a href="particular.php">Record Wise</a></li>
                       </ul>
                   </li>
+                  
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="fa fa-laptop"></i>
+                          <span>Get Total</span>
+                      </a>
+                      <ul class="sub">
+                          <li><a  href="student_count.php">Individual</a></li>
+                          <li><a  href="overall_subjects.php">Overall</a></li>
+                      </ul>
+                  </li>
+
 
                   <li class="sub-menu">
                       <a href="javascript:;" >
@@ -118,7 +130,8 @@
                           <li><a  href="../Student/teacherRegister.php">New Faculty</a></li>
                       </ul>
                   </li>
-
+                  
+                 
 
               </ul>
               <!-- sidebar menu end-->
